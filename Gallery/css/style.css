@@ -1,0 +1,69 @@
+@font-face {
+    font-family: "Sunny Spells";
+    src: url(../../Font/SunnyspellsRegular-MV9ze.otf) format('opentype');
+}
+
+body {
+    font: 24px/36px "Sunny Spells", Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: #ddd;
+}
+
+/* clearfix float */
+.clearfix {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* img size */
+img {
+    width: 140px;
+}
+
+h1 {
+    font-size: 60px;
+    margin: 30px;
+}
+
+.container {
+    background-color: white;
+    width: 700px;
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, .5);
+}
+
+.gallery li {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 3px solid rgba(0, 0, 0, .6);
+    float: left;
+    margin-right: 20px;
+    margin-left: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery li span {
+    display: block;
+    width: 140px;
+    height: 140px;
+    background-color: rgba(255, 0, 250, .3);
+    color: white;
+    line-height: 140px;
+    text-shadow: 0 0 5px black;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: .3s;
+}
+
+.gallery li:hover span {
+    opacity: 1;
+    transform: rotate(360deg);
+}
+

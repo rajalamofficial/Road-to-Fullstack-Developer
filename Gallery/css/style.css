@@ -99,8 +99,9 @@ h1 {
 .overlay:target img {
     animation: zoomAndFade .3s;
 }
+/* close */
 
-.overlay a {
+.overlay .close {
     display: none;
     color: white;
     border: 2px solid white;
@@ -109,13 +110,33 @@ h1 {
     text-decoration: none;
 }
 
-.overlay:target a {
+.overlay:target .close {
     display: block;
     position: absolute;
     left: 50%;
     transform: translate(-50%, -120%);
     background-color: rgba(0, 0, 0, .9);
     animation: dropDown .3s;
+}
+
+/* prev and next */
+.overlay .next,
+.overlay .prev {
+    position: absolute;
+    top: 40%;
+}
+
+.overlay:target .next,
+.overlay:target .prev {
+    height: 100px;
+}
+
+.overlay .next {
+    margin-left: 30px;
+}
+
+.overlay .prev {
+    margin-left: -120px;
 }
 
 @keyframes zoomAndFade {

@@ -1,5 +1,5 @@
 html, body {
-    background-color: #ddd;
+    background-color: #ccc;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
@@ -7,7 +7,7 @@ html, body {
 
 /* Latihan 1 */
 .container-satu {
-    width: 800px;
+    max-width: 1000px;
     background-color: white;
     margin: 20px auto;
     padding: 10px;
@@ -28,7 +28,7 @@ html, body {
 
 /* latihan 2 */
 .container-dua {
-    max-width: 800px;
+    max-width: 1000px;
     display: flex;
     margin: 20px auto;
     justify-content: space-between;
@@ -52,6 +52,77 @@ html, body {
     background-color: rgb(103, 255, 103);
 }
 
+/* Latihan 3 */
+.container-tiga {
+    max-width: 1000px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.thumbnail {
+    width: 25%;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+/* Latihan 4 */
+.container-empat {
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #ddd;
+    display: flex;
+}
+
+.card {
+    text-align: center;
+    border: 1px solid #555;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.card .header {
+    height: 150px;
+    background-color: #555;
+}
+
+.card .content {
+    padding: 20px;
+}
+
+.card.big {
+    transform: scale(1.08);
+}
+
+/* Latihan 5 */
+.container-lima {
+    max-width: 800px;
+    height: 400px;
+    margin: auto;
+    border: 5px solid black;
+    display: flex;
+    margin-bottom: 100px;
+}
+
+.kotak {
+    width: 100px;
+    height: 100px;
+    background-color: lightcoral;
+    margin: auto;
+    display: flex;
+    text-align: center;
+}
+
+.kotak span {
+    margin: auto;
+}
+
+
+
 @media ( max-width: 600px ) {
     .container-dua {
         display: flex;
@@ -62,5 +133,17 @@ html, body {
     .layanan {
         width: 100%;
         margin-bottom: 5px;
+    }
+
+    .thumbnail {
+        width: 50%;
+    }
+
+    .container-empat {
+        flex-wrap: wrap;
+    }
+
+    .card.big {
+        transform: scale(1);
     }
 }

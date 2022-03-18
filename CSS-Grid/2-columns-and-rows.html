@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            width: 60%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 50px 100px 150px;
+            grid-template-rows: 40px 80px 120px;
+        }
+
+        .item {
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+        }
+
+        .item:nth-child(even) {
+            background-color: salmon;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="item">item 1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3</div>
+        <div class="item">item 4</div>
+        <div class="item">item 5</div>
+        <div class="item">item 6</div>
+        <div class="item">item 7</div>
+        <div class="item">item 8</div>
+        <div class="item">item 9</div>
+    </div>
+</body>
+</html>

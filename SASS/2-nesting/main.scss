@@ -1,0 +1,38 @@
+.main {
+    background-color: salmon;
+
+    & &-heading {
+        font-size: 2em;
+    }
+
+    & &-paragraph {
+        font-size: 1.4em;
+    }
+
+    &:hover {
+        background-color: slateblue;
+    }
+}
+
+.footer {
+    background-color: slateblue;
+
+    & &-heading {
+        font-size: 1.6em;
+    }
+
+    & &-paragraph {
+        font-size: 1.2em;
+    }
+
+    &:hover {
+        background-color: salmon;
+    }
+}
+
+.main, .footer {
+    h1, p {
+        letter-spacing: 3px;
+    }
+}
+

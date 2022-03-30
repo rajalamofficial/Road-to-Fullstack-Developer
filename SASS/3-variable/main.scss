@@ -1,0 +1,40 @@
+// ~VARIABLE PADA SASS~
+$primary-color: rgb(197, 73, 197);
+$secondary-color: rgb(110, 57, 255);
+$background: rgb(255, 242, 219);
+
+// ~MAP~
+// MAP MIRIP SAAT KITA MEMBUAT OBJECT PADA JAVASCRIPT
+$alert: (
+    danger: rgb(255, 72, 72),
+    success: rgb(0, 187, 0),
+    warning: rgb(255, 255, 118)
+);
+
+body {
+    background-color: $background;
+}
+
+.container {
+    display: grid;
+    max-width: 800px;
+    border: 3px solid $primary-color;
+    margin: auto;
+    padding: 20px;
+
+    header, p {
+        color: $secondary-color;
+    }
+    // map
+    button {
+        margin: auto;
+        padding: 10px;
+        background-color: map-get($alert, warning);
+        border-radius: 20px;
+    }
+}
+
+
+
+
+

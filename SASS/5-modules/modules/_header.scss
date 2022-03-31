@@ -1,0 +1,8 @@
+@use 'mixin';
+
+.header ul {
+    @include mixin.inline-list();
+    li {
+        background-color: salmon;
+    }
+}

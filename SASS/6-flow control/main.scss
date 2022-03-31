@@ -1,0 +1,9 @@
+// Flow Control
+// di SASS terdapat flow control dalam bahasa pemrograman
+// seperti if else, for loop, while loop, dll
+
+@use 'modules/mixin';
+
+body {
+    @include mixin.theme($light-mode: true);
+}

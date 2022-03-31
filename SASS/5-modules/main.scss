@@ -1,0 +1,10 @@
+// @import 'modules/mixin';
+// @import 'modules/header';
+// @import 'modules/footer';
+// @import 'modules/box';
+
+// penggunaan @import sudah tidak disarankan, lebih baik menggunakan @use
+
+@use 'modules/header';
+@use 'modules/footer';
+@use 'modules/box';

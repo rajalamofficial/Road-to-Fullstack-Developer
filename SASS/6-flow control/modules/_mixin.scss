@@ -1,0 +1,17 @@
+// dark mode
+$dark-bg: #333;
+$light-text: #ddd;
+
+// light mode
+$light-bg: #ddd;
+$dark-text: #333;
+
+@mixin theme($light-mode: true) {
+    @if $light-mode {
+        background-color: $light-bg;
+        color: $dark-text;
+    } @else {
+        background-color: $dark-bg;
+        color: $light-text;
+    }
+}

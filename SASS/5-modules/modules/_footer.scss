@@ -1,0 +1,9 @@
+@use 'mixin';
+
+
+.footer ul {
+    @include mixin.inline-list();
+    li {
+        background-color: slateblue;
+    }
+}

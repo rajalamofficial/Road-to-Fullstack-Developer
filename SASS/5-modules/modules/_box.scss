@@ -1,0 +1,14 @@
+@use 'mixin';
+
+.box {
+    @include mixin.flex-box(space-evenly, row-reverse);
+    width: 600px;
+    height: 300px;
+    background-color: #e9dede;
+    .item {
+        @include mixin.flex-box();
+        width: 80px;
+        height: 80px;
+        background-color: azure;
+    } 
+}

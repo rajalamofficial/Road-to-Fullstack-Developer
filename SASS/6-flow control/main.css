@@ -1,6 +1,58 @@
-body {
-  background-color: #ddd;
-  color: #333;
+* {
+  list-style: none;
+  background-color: #333;
+  color: #eee;
+}
+
+.gradient ul {
+  margin: 0;
+  padding: 0;
+}
+.gradient li:nth-child(1) {
+  background-color: #7162cf;
+}
+.gradient li:nth-child(2) {
+  background-color: #786ad2;
+}
+.gradient li:nth-child(3) {
+  background-color: #7f71d4;
+}
+.gradient li:nth-child(4) {
+  background-color: #8679d6;
+}
+.gradient li:nth-child(5) {
+  background-color: #8d81d9;
+}
+.gradient li:nth-child(6) {
+  background-color: #9489db;
+}
+.gradient li:nth-child(7) {
+  background-color: #9b91de;
+}
+.gradient li:nth-child(8) {
+  background-color: #a399e0;
+}
+.gradient li:nth-child(9) {
+  background-color: #aaa0e2;
+}
+.gradient li:nth-child(10) {
+  background-color: #b1a8e5;
+}
+
+.social .instagram {
+  color: rgb(255, 94, 121);
+}
+.social .twitter {
+  color: rgb(64, 140, 255);
+}
+.social .github {
+  color: #444;
+}
+.social .facebook {
+  color: rgb(43, 43, 255);
+}
+.social .whatsapp {
+  color: lightgreen;
 }
 
 /*# sourceMappingURL=main.css.map */

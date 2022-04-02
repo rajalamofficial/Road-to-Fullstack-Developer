@@ -1,9 +1,14 @@
+// Flow Control
+// di SASS terdapat flow control dalam bahasa pemrograman
+// seperti if else, for loop, while loop, dll
+
+
 // dark mode
 $dark-bg: #333;
-$light-text: #ddd;
+$light-text: #eee;
 
 // light mode
-$light-bg: #ddd;
+$light-bg: #eee;
 $dark-text: #333;
 
 @mixin theme($light-mode: true) {
@@ -14,4 +19,38 @@ $dark-text: #333;
         background-color: $dark-bg;
         color: $light-text;
     }
+}
+
+// for loop
+$color: slateblue;
+@mixin gradient() {
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    @for $i from 1 to 11 {
+        li:nth-child(#{$i}) {
+            background-color: lighten($color, $i * 2%);
+        }
+    }
+}
+
+// for each
+
+$social-media: (
+    instagram: rgb(255, 94, 121),
+    twitter: rgb(64, 140, 255),
+    github: #444,
+    facebook: rgb(43, 43, 255),
+    whatsapp: lightgreen
+);
+
+@mixin socials() {
+    @each $social, $color in $social-media {
+        .#{$social} {
+            color: $color;
+        }
+    }      
 }

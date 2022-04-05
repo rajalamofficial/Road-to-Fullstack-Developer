@@ -21,3 +21,21 @@ for (let i = 0; i < p.length; i++) {
     p[i].style.backgroundColor = '#222';
     p[i].style.color = '#ddd';
 }
+
+// memperkecil scope node root
+const sectionA = document.getElementById('a');
+function sectionAStyle() {
+    const font = sectionA.getElementsByTagName('p');
+    font[0].style.fontFamily = 'arial';
+} 
+
+sectionAStyle();
+
+
+const sectionB = document.querySelector('section#b');
+function sectionBStyle() {
+    const fontColor = sectionB.querySelector('p');
+    fontColor.style.color = 'red';
+}
+
+sectionBStyle();

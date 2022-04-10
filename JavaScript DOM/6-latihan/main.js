@@ -26,3 +26,32 @@ btnUbahBgAcak.addEventListener('click', function(){
 
     document.body.style.backgroundColor = `rgb(${r} ${g} ${b})`;
 });
+
+
+// slider
+
+const sliderR = document.querySelector('input[name=sliderR]');
+sliderR.addEventListener('input', function(){
+    const r = sliderR.value;
+    const g = sliderG.value;
+    const b = sliderB.value;
+    document.body.style.backgroundColor = `rgb(${r} ${g} ${b})`;
+});
+
+const sliderG = document.querySelector('input[name=sliderG]');
+sliderG.addEventListener('input', function(){
+    const r = sliderR.value;
+    const g = sliderG.value;
+    const b = sliderB.value;
+    document.body.style.backgroundColor = `rgb(${r} ${g} ${b})`;
+});
+
+const sliderB = document.querySelector('input[name=sliderB]');
+sliderB.addEventListener('input', function(){
+    const r = sliderR.value;
+    const g = sliderG.value;
+    const b = sliderB.value;
+    document.body.style.backgroundColor = `rgb(${r} ${g} ${b})`;
+});
+
+// mouse hover

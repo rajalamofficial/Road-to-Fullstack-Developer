@@ -55,3 +55,9 @@ sliderB.addEventListener('input', function(){
 });
 
 // mouse hover
+document.body.addEventListener('mousemove', function(e){
+    const xPos = Math.round(e.clientX / innerWidth * 255);
+    const yPos = Math.round(e.clientY / innerWidth * 255);
+    console.log(xPos);
+    document.body.style.backgroundColor = `rgb(${xPos} ${yPos} 100)`;
+});

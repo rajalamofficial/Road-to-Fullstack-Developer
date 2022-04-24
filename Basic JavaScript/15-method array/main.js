@@ -14,3 +14,15 @@ nama.shift();
 
 // join: menampilkan semua isi array    
 console.log(nama.join(' - '));
+
+// splice: menambahkan array di tengah
+let myArr = ['Ichi', 'Nii', 'San', 'Yon'];
+myArr.splice(1, 0, 'Nee');
+console.log(myArr.join(', '));
+
+
+// slice: mengiris sebuah array menjadi array yang baru
+var myArr2 = myArr.slice(1, 3);
+console.log(myArr2.join(', '));
+
+

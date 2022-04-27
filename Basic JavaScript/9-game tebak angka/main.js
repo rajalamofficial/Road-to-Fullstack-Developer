@@ -1,43 +1,44 @@
-let play = true;
-while(play){
-// welcome
-    alert(`Tebak angka dari 1-10\nkamu hanya mempunyai kesempatan sebanyak 3x`);
+// Welcome
+alert('Game tebak angka dari (1-10)\nAnda punya kesempatan sebanyak 3x');
 
-// bot memilih
-    let bot = Math.round(Math.random() * 10) + 1;
-    console.log(bot)
+// BOT memilih
+let bot = Math.round(Math.random() * 10);
 
-// chance
+function play(){
+    // Chance
     let chance = 3;
-
-// rules permainan
     while(chance >= 0){
 
-        // player memilih
-        let player = prompt(`Masukan angka tebakan dari (1-10):`);
+        // Player memilih
+        let player = prompt('Tebak angka dari (1-10):');
 
-        if(player == bot){
-            alert('TEBAKAN ANDA BENAR!');
-            break;
-        } else if(player == ''){
-            alert('Mohon Masukkan angka!');
-        } else if(player == null){
-            break;
+        // Rules permainan
+        if(player == ''){
+            alert('MOHON MASUKKAN ANGKA!');
+        } else if(player ==  null){
+            return playing = confirm('Ingin bermain lagi?');
+        } else if(player == bot){
+            alert(`ANDA BENAR!`);
+            return;
         } else if(player < bot){
             chance -= 1;
-            alert(`TERLALU RENDAH!, SISA KESEMPATAN ANDA ADALAH ${chance}`);
+            alert(`TERLALU RENDAH, SISA KESEMPATAN ANDA ADALAH ${chance}`);
         } else if(player > bot){
             chance -= 1;
             alert(`TERLALU TINGGI, SISA KESEMPATAN ANDA ADALAH ${chance}`);
-        } 
-        
+        }
+
         if(chance == 0){
-            alert(`ANDA GAGAL!, TEBAKAN YANG BENAR ADALAH ${bot}`);
-            play = confirm('ingin bermain lagi?');
+            alert(`KESEMPATAN ANDA HABIS, TEBAKAN YANG BENAR ADALAH: ${bot}`);
+            playing = confirm('Ingin bermain lagi?');
+            return;
         }
     }
-        play = confirm('ingin bermain lagi?');
 }
 
-alert('terimakasih!');
+let playing = true;
+while(playing){
+    play();
+}
 
+alert('Terimakasih telah bermain :D');

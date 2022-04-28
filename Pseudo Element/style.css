@@ -1,0 +1,32 @@
+.container {
+    width: 800px;
+    margin: auto;
+    display: flex;
+}
+
+h2 {
+    flex: 1;
+    text-align: center;
+    margin-right: -120px;
+}
+
+.css {
+    display: block;
+    flex: 1;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: justify;
+    background-color: #333;
+    color: whitesmoke;
+    position: relative;
+}
+
+.css::before {
+    content: '';
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-right: 12px solid #333;
+    position: absolute;
+    top: 16px;
+    left: -11px;
+}

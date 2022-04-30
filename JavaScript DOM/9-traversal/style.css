@@ -1,0 +1,61 @@
+body  {
+    background-color: slateblue;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 80px;
+    padding-left: 80px;
+    box-sizing: border-box;
+}
+
+.card {
+    border: 2px solid black;
+    width: 440px;
+    display: flex;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 50px;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.card img {
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.card .nama {
+    margin: 25px auto;
+    padding-left: 55px;
+
+}
+
+.card .telp {
+    color: #999;
+    position: absolute;
+    bottom: 0;
+    right: 40%;
+    margin-right: -10px;
+    margin-bottom: 30px;
+}
+
+.card .close {
+    margin: auto;
+    font-weight: bolder;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.card:hover .close {
+    color: red;
+}

@@ -41,10 +41,14 @@ pilihan.forEach(function(img){
 
         compThink();
 
-        let imgComp = document.querySelector('.img-computer');
-        imgComp.setAttribute('src', `img/${comp}.png`);
+        setTimeout(function(){
 
-        let info = document.querySelector('.info');
-        info.innerHTML = hasil;
+            let imgComp = document.querySelector('.img-computer');
+            imgComp.setAttribute('src', `img/${comp}.png`);
+    
+            let info = document.querySelector('.info');
+            info.innerHTML = hasil;
+        }, 1000);
+
     });
 });

@@ -54,6 +54,8 @@ body  {
     font-weight: bolder;
     cursor: pointer;
     font-size: 25px;
+    text-decoration: none;
+    color: black;
 }
 
 .card:hover .close {

@@ -1,49 +1,73 @@
-// object literasi
-let mahasiswa1 = {
-    nama: 'Azura',
+// object literal
+let mhs = {
+    nama: 'dodi',
+    umur: 21,
     energi: 10,
     main: function(energi){
-        this.energi -= energi;
+        this.energi -= energi;  
+        console.log(`${this.nama} sedang bermain, energi berkurang -${energi}`);
+        return `sisa energi: ${this.energi}`;      
     },
     makan: function(energi){
         this.energi += energi;
+        console.log(`${this.nama} sedang makan, energi bertambah +${energi}`);
+        return `sisa energi: ${this.energi}`;
+    },
+    tidur: function(energi){
+        this.energi += energi * 2;
+        console.log(`${this.nama} sedang makan, energi bertambah +${energi * 2}`);
+        return `sisa energi: ${this.energi}`;
     }
 }
 
-// object funtion
-function Mhs(nama, energi){
+// object function
+function Mahasiswa(nama, umur, energi){
     let mahasiswa = {};
     mahasiswa.nama = nama;
+    mahasiswa.umur = umur;
     mahasiswa.energi = energi;
     mahasiswa.main = function(energi){
         this.energi -= energi;
-        console.log(`${this.nama} sedang bermain, energi berkurang -${energi}, sisa energi:`);
-        return this.energi;
+        console.log(`${this.nama} sedang bermain, energi berkurang -${energi}`);
+        return `sisa energi: ${this.energi}`;      
     }
     mahasiswa.makan = function(energi){
         this.energi += energi;
-        console.log(`${this.nama} sedang makan, energi bertambah +${energi}, sisa energi:`);
-        return this.energi;
+        console.log(`${this.nama} sedang makan, energi bertambah +${energi}`);
+        return `sisa energi: ${this.energi}`;
+    }
+    mahasiswa.tidur = function(energi){
+        this.energi += energi * 2;
+        console.log(`${this.nama} sedang makan, energi bertambah +${energi * 2}`);
+        return `sisa energi: ${this.energi}`;
     }
     return mahasiswa;
 }
 
-let mahasiswa2 = Mhs('Alam', 10);
+let mahasiswa1 = Mahasiswa('Azura', 17, 10);
 
-// constructor function object
-function Mahasiswa(nama, energi){
+// object consturctor
+function Mhs(nama, umur, energi){
     this.nama = nama;
+    this.umur = umur;
     this.energi = energi;
     this.main = function(energi){
         this.energi -= energi;
-        console.log(`${this.nama} sedang bermain, energi berkurang -${energi}, sisa energi:`);
-        return this.energi;
-    },
+        console.log(`${this.nama} sedang bermain, energi berkurang -${energi}`);
+        return `sisa energi: ${this.energi}`;      
+    }
     this.makan = function(energi){
         this.energi += energi;
-        console.log(`${this.nama} sedang makan, energi bertambah +${energi}, sisa energi:`);
-        return this.energi;
+        console.log(`${this.nama} sedang makan, energi bertambah +${energi}`);
+        return `sisa energi: ${this.energi}`;
+    }
+    this.tidur = function(energi){
+        this.energi += energi * 2;
+        console.log(`${this.nama} sedang makan, energi bertambah +${energi * 2}`);
+        return `sisa energi: ${this.energi}`;
     }
 }
 
-let mahasiswa3 = new Mahasiswa('Raj', 10);
+let mahasiswa2 = new Mhs('Alam', 21, 10);
+
+// object.create()

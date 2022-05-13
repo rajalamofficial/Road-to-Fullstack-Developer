@@ -71,3 +71,31 @@ function Mhs(nama, umur, energi){
 let mahasiswa2 = new Mhs('Alam', 21, 10);
 
 // object.create()
+let methodMahasiswa = {
+    main: function(energi){
+        this.energi -= energi;
+        console.log(`${this.nama} sedang bermain, energi berkurang -${energi}`);
+        return `sisa energi: ${this.energi}`;      
+    },
+    makan: function(energi){
+        this.energi += energi;
+        console.log(`${this.nama} sedang makan, energi bertambah +${energi}`);
+        return `sisa energi: ${this.energi}`;
+    },
+    tidur: function(energi){
+        this.energi += energi * 2;
+        console.log(`${this.nama} sedang makan, energi bertambah +${energi * 2}`);
+        return `sisa energi: ${this.energi}`;
+    }
+}
+
+function MahasiswaObj(nama, umur, energi){
+    let mahasiswa = Object.create(methodMahasiswa);
+    mahasiswa.nama = nama;
+    mahasiswa.umur = umur;
+    mahasiswa.energi = energi;
+    
+    return mahasiswa;
+}
+
+let mahasiswa3 = MahasiswaObj('panjul', 24, 10);

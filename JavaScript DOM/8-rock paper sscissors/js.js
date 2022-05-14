@@ -56,10 +56,9 @@ options.forEach(function(img){
 
             let info = document.querySelector('.info span');
             info.innerHTML = results;    
-        }, 1000)
+        }, 1005)
 
-       
-
+        console.log(`player: ${player}, comp: ${comp}, hasil ${results}`)
     });
 })
 

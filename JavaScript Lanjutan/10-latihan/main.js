@@ -1,35 +1,42 @@
-// ambil semua element video
-const videos = Array.from(document.querySelectorAll('[data-duration]'));
+function myPlaylist(playlist, totalVideo, videoDuration){
 
-// pilih hanya yang 'JavaScript Lanjutan'
-const jsLanjut = videos.filter(video => video.textContent.includes('JavaScript Lanjutan'))
+    // mengambil semua list video dan ubah list nya menjadi Array
+    const videos = Array.from(document.querySelectorAll('[data-duration]'));
 
-// ambil durasi masing masing video
-    .map(item => item.dataset.duration)
+    // filter list video yang dikirimkan parameter playlist
+    const playlistX = videos.filter(video => video.innerHTML.includes(playlist))
 
-// ubah durasi menjadi float, ubah menjadi detik
-    .map(waktu => {
-        // [23:13] => [23, 13]
-        const parts = waktu.split(':').map(part => parseFloat(part))
-        return (parts[0] * 60) + parts[1];
-    })
+    // ambil durasi masing masing video
+        .map(durations => durations.dataset.duration)
 
-// jumlahkan detik
-    .reduce((total, detik) => {
-        return total + detik;
-    })
+    // ubah menjadi float & ubah menjadi detik
+        .map(times => {
+            const time = times.split(':').map(num => parseFloat(num));
+            if(time.length == 3) return time[0] * 3600 + time[1] * 60 + time[2];
+            // else
+            return time[0] * 60 + time[1];
+        })
 
-// ubah menjadi jam, menit, detik
-    const jam = Math.floor(jsLanjut / 3600);
-    const menit = Math.floor(jsLanjut % 3600 / 60);
-    const detik = jsLanjut % 60;
+    // jumlahkan semua detik
+        .reduce((acc, curValue) => acc + curValue);
 
-// simpan ke DOM
-    const jumlahVideo = videos.filter(video => video.textContent.includes('JavaScript Lanjutan')).length;
-    const pJumlahVideo = document.querySelector('.jumlahVideo')
-    pJumlahVideo.textContent = `${jumlahVideo} video.`;
+    // ubah format detik menjadi JAM : MENIT : DETIK
+    const hour = Math.floor(playlistX / 3600);
+    const minute = Math.floor(playlistX % 3600 / 60);
+    const second = playlistX % 60;
 
-    const pDurasiVideo = document.querySelector('.durasiVideo');
-    pDurasiVideo.textContent = `${jam} jam, ${menit} menit, ${detik} detik.`
+    // simpan ke dalam DOM
+    const eachVideos = videos.filter(video => video.innerHTML.includes(playlist)).length;
+    const jumlahVideoX = document.querySelector(totalVideo);
+    jumlahVideoX.innerHTML = `${eachVideos} video.`;
 
-console.log(detik);
+    const durasiVideoX = document.querySelector(videoDuration);
+    durasiVideoX.innerHTML = `${hour} jam, ${minute} menit, ${second} detik.`;
+
+}
+
+myPlaylist('JavaScript Lanjutan', '.jumlahVideoJs', '.durasiVideoJs');
+myPlaylist('CSS 3', '.jumlahVideoCss', '.durasiVideoCss');
+myPlaylist('SASS', '.jumlahVideoSass', '.durasiVideoSass');
+myPlaylist('JavaScript Dasar', '.jumlahVideoJsDasar', '.durasiVideoJsDasar');
+

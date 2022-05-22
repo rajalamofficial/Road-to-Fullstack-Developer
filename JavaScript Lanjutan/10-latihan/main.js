@@ -39,4 +39,3 @@ myPlaylist('JavaScript Lanjutan', '.jumlahVideoJs', '.durasiVideoJs');
 myPlaylist('CSS 3', '.jumlahVideoCss', '.durasiVideoCss');
 myPlaylist('SASS', '.jumlahVideoSass', '.durasiVideoSass');
 myPlaylist('JavaScript Dasar', '.jumlahVideoJsDasar', '.durasiVideoJsDasar');
-

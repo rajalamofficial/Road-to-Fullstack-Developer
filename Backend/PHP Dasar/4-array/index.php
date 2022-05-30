@@ -66,12 +66,14 @@ $angka = [4, 2, 7, 1, 3, 10, 8, 24];
 </style>
 <body>
     <div class="container clear">
+        <!-- for loop -->
         <?php for($i = 0; $i < count($angka); $i++) : ?>
             <div class="box"><?= $angka[$i]?></div>
         <?php endfor;?>
 
         <div class="clear"></div>
         
+        <!-- foreach -->
         <?php foreach($angka as $a) : ?>
             <div class="box"><?= $a?></div>
         <?php endforeach;?>

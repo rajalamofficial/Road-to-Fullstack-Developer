@@ -1,7 +1,9 @@
 <?php 
 
-require 'functions.php';
-$karyawan = query("SELECT * FROM karyawan");
+require "functions.php";
+$mahasiswa = query("SELECT * FROM mahasiswa");
+
+$no = 1;
 
 ?>
 
@@ -12,39 +14,53 @@ $karyawan = query("SELECT * FROM karyawan");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        img {
-            display: flex;
-            width: 80px;
-            margin: auto;
-        }
-    </style>
 </head>
+
+<style>
+    img {
+        display: flex;
+        margin: auto;
+        width: 100px;
+    }
+
+    .add {
+        display: block;
+        margin: 20px;
+    }
+
+</style>
+
 <body>
+    <a href="add.php" class="add">Tambahkan Data</a>
     <table border="1" cellpadding="10" cellspacing="0">
         <tr>
             <th>No.</th>
-            <th>Action</th>
+            <th>Aksi</th>
             <th>Nama</th>
-            <th>NIK</th>
+            <th>NIM</th>
+            <th>Jurusan</th>
             <th>Email</th>
             <th>Profile Picture</th>
         </tr>
 
-        <?php foreach($karyawan as $eachKaryawan) : ?>
+        <?php foreach($mahasiswa as $mhs) : ?>
         <tr>
-            <td>1.</td>
-            <td><?= $eachKaryawan["nama"]; ?></td>
+            <td><?= $no . "."?></td>
             <td>
-                <a href="">Add</a> |
-                <a href="">Delete</a>
+                <a href="">Edit</a> |
+                <a href="delete.php?id=<?= $mhs["id"]; ?>" onclick="confirm('Aapakah anda yakin ingin menghapus data ini?')">Delete</a> 
             </td>
-            <td><?= $eachKaryawan["nik"]; ?></td>
-            <td><?= $eachKaryawan["email"]; ?></td>
-            <td><img src="img/<?= $eachKaryawan["gambar"]; ?>" alt=""></td>
+            <td><?= $mhs["nama"]; ?></td>
+            <td><?= $mhs["nim"]; ?></td>
+            <td><?= $mhs["jurusan"] ?></td>
+            <td><?= $mhs["email"]; ?></td>
+            <td><img src="img/<?= $mhs["gambar"]; ?>" alt="" srcset=""></td>
         </tr>
+        <?php $no++ ?>
         <?php endforeach; ?>
 
+
+       
     </table>
 </body>
 </html>

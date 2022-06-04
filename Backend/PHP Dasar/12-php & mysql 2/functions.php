@@ -1,20 +1,67 @@
 <?php 
 
-// koneksikan ke database
-$db = mysqli_connect("localhost", "root", "", "pt. azura");
+// menghubungkan dengan database
+$db = mysqli_connect("localhost", "root", "", "universitas azura");
 
-// mengambil data dari table karyawan
 function query($query){
     global $db;
-    $tableKaryawan = mysqli_query($db, $query);
+    $tableMahasiswa = mysqli_query($db, $query);
 
-    // simpan data ke dalam wadah array
-    $dataKaryawan = [];
+    $arrayMahasiswa = [];
 
-    while($karyawan = mysqli_fetch_assoc($tableKaryawan)) {
-        $dataKaryawan[] = $karyawan;
+    while($dataMahasiswa = mysqli_fetch_assoc($tableMahasiswa)){
+        $arrayMahasiswa[] = $dataMahasiswa;
     }
-    return $dataKaryawan;
+
+    return $arrayMahasiswa;
+
 }
 
+function add($method){
+    global $db;
+
+    // tombol button jika sudah ditekan
+    if(isset($method["submit"])){
+        $nama = $method["nama"];
+        $nim = $method["nim"];
+        $jurusan = $method["jurusan"];
+        $email = $method["email"];
+        $gambar = $method["gambar"];
+
+        $query = "INSERT INTO mahasiswa VALUES(
+            '', '$nama', '$nim', '$jurusan', '$email', '$gambar'
+        )";
+        mysqli_query($db, $query);
+
+        // cek apakah data berhasil ditambahkan atau tidak
+        if(mysqli_affected_rows($db) > 0){
+            echo "<script>
+                    alert('Data berhasil ditambahkan!');
+                    window.location.href = 'index.php';
+                  </script>";
+        } else {
+            echo "<script>
+                    alert('Data gagal ditambahkan!');
+                  </script>"; 
+        }
+    }
+}
+
+function detele($id){
+    global $db;
+
+    $data = mysqli_query($db, "DELETE FROM mahasiswa where id = $id");
+
+    if($data == true){
+        echo "<script>
+                alert('Data berhasil dihapus!');
+                window.location.href = 'index.php';
+            </script>";
+    } else {
+        echo "<script>
+                alert('Data gagal dihapus!');
+                window.location.href = 'index.php';
+            </script>";
+    }
+}
 ?>

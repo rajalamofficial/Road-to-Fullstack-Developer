@@ -47,8 +47,8 @@ $no = 1;
         <tr>
             <td><?= $no . "."?></td>
             <td>
-                <a href="">Edit</a> |
-                <a href="delete.php?id=<?= $mhs["id"]; ?>" onclick="confirm('Aapakah anda yakin ingin menghapus data ini?')">Delete</a> 
+                <a href="edit.php?id=<?= $mhs["id"]; ?>">Edit</a> |
+                <a href="delete.php?id=<?= $mhs["id"]; ?>" onclick=" return confirm('Aapakah anda yakin ingin menghapus data ini?')">Delete</a> 
             </td>
             <td><?= $mhs["nama"]; ?></td>
             <td><?= $mhs["nim"]; ?></td>

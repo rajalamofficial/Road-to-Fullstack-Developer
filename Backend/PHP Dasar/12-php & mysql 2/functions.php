@@ -64,4 +64,38 @@ function detele($id){
             </script>";
     }
 }
+
+function edit($id){
+    global $db;
+
+    $method = $_POST;
+
+    if(isset($method["submit"])){
+        $nama = $method["nama"];
+        $nim = $method["nim"];
+        $jurusan = $method["jurusan"];
+        $email = $method["email"];
+        $gambar = $method["gambar"];
+
+        $data = mysqli_query($db, "UPDATE mahasiswa SET
+                            nama = '$nama',
+                            nim = '$nim',
+                            jurusan = '$jurusan', 
+                            email = '$email', 
+                            gambar = '$gambar' WHERE id = $id");
+
+        if($data == true){
+            echo "<script>
+                    alert('Data berhasil diupdate!');
+                    window.location.href = 'index.php';
+                </script>";
+        } else {
+            echo "<script>
+                    alert('Data gagal diupdate!');
+                    window.location.href = 'index.php';
+                </script>";
+        }
+    }
+}
+
 ?>

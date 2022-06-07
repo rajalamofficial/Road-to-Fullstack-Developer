@@ -46,7 +46,7 @@ function Mahasiswa(nama, umur, energi){
 
 let mahasiswa1 = Mahasiswa('Azura', 17, 10);
 
-// object consturctor
+// object constructor
 function Mhs(nama, umur, energi){
     this.nama = nama;
     this.umur = umur;

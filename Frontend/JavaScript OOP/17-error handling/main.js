@@ -11,7 +11,7 @@ try{
     console.log(result);
 } catch(error) {
     // error ditangkap dan menampilkan pesan kesalahan
-    console.log(`Terjadi ${error}`);
+    console.log(`Terjadi error: ${error.message}`);
 } finally{
     // jika terjadi error ataupun tidak block finally akan sealalu di eksekusi
     console.log("Program selesai")

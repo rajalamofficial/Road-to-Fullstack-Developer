@@ -1,0 +1,13 @@
+{
+    "firstName": "Raj",
+    "lastName": "Alam",
+    "address": {
+        "country": "Indonesia",
+        "city": "South Tangerang"
+    },
+    "hobbies": [
+        "Coding",
+        "Playin' Games",
+        "Watchin' Anime"
+    ]
+}

@@ -1,0 +1,102 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    position: relative;
+    display: inline;
+}
+
+header .jumbotron {
+    color: aliceblue;
+    padding: 100px;
+    text-align: center;
+    background-color: #646FD4;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    padding: 20px;
+    background-color: rgb(90, 99, 179);
+}
+
+header nav ul li{
+    display: inline;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: aliceblue;
+    margin-right: 20px;
+}
+
+main, aside {
+    color: rgb(44, 44, 44);
+}
+
+h2, h3, h4 {
+    margin: 10px;
+    color: #646FD4;
+}
+
+main {
+    display: inline;
+}
+
+main .content {
+    width: 75%;
+    overflow: auto;
+    padding: 20px 5px 0 20px;
+    float: left;
+}
+
+main article {
+    padding: 20px;
+    margin-bottom: 20px;
+    line-height: 23px;
+    letter-spacing: .3px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, .2);
+    border-radius: 10px;
+}
+
+article img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.logo {
+    margin-top: 20px;
+    width: 120px;
+}
+
+aside {
+    padding: 20px;
+    width: 25%;
+    float: right;
+}
+
+aside .sidebar{
+    text-align: center;
+}
+
+@media screen and (max-width: 992px){
+    main .content, aside {
+        padding-right: 20px;
+        width: 100%;
+    }
+}

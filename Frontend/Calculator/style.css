@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 
+/*  */
 body {
     background-color: rgb(190, 190, 190);
 }
@@ -9,6 +10,11 @@ body {
 .display {
     padding: 20px;
     background-color: #333;
+}
+
+.mini-display {
+    color: white;
+    text-align: right;
 }
 
 .display h1 {

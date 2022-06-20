@@ -2,7 +2,6 @@
     box-sizing: border-box;
 }
 
-/*  */
 body {
     background-color: rgb(190, 190, 190);
 }
@@ -10,9 +9,14 @@ body {
 .display {
     padding: 20px;
     background-color: #333;
+    position: relative;
 }
 
 .mini-display {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    margin-right: 22px;
     color: white;
     text-align: right;
 }
@@ -84,8 +88,29 @@ body {
     background-color: rgb(216, 141, 1);
 }
 
+.history {
+    width: 80%;
+    margin: 20px auto;
+    overflow: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    padding: 10px;
+    background-color: orange;
+    color: white;
+}
+
 @media screen and (max-width: 490px){
     .button {
         padding: 45px 0;
+    }
+
+    .history {
+        width: 100%;
     }
 }

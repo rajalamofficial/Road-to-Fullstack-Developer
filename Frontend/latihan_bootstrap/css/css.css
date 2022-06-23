@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@300&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
+/* --------------------------------------------------------------------------------------------------------- */
+                                                    /* Navbar */
+* {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+}
+
+
+.navbar-brand {
+    width: 170px;
+    margin-left: 160px;
+}
+
+.navbar .collapse {
+    padding: 15px;
+}
+
+#home {
+    color: #4db7fe;
+    border-bottom: 3px solid #4db7fe;
+
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+    margin-right: 30px;
+    font-weight: bold;
+}
+
+.navbar .navbar-nav .nav-item .nav-link:hover {
+    color: #4db7fe;
+}
+
+#register {
+    background-color: #4db7fe;
+    color: white;
+    font-size: 11px;   
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 30px;
+    margin-top: -5px;
+    border-radius: 30px;
+    margin-right: 180px;
+}
+
+/* --------------------------------------------------------------------------------------------------------- */
+                                                 /* Header */
+.slider-first {
+    background-color:#0095f6;
+    height: 750px;
+}
+
+.slider-first h1 {
+    font-size: 54px;
+    font-weight: 700;
+    margin-top: -400px;
+}
+
+.slider-first h2 {
+    font-size: 40px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.slider-first button {
+    background-color: #04436d;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 30px;
+    margin-top: 25px;
+}
+
+.slider-second {
+    background-color:#0066ff;
+    height: 750px;
+}
+
+.slider-second h1 {
+    font-size: 54px;
+    font-weight: 700;
+    margin-top: -450px;
+}
+ 
+.slider-second button {
+    background-color: #04436d;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 30px;
+    margin-top: 25px;
+}
+/* --------------------------------------------------------------------------------------------------------- */
+                                                    /* body */
+.container-md {
+    margin: 80px 80px 10px;
+}
+
+.row {
+    margin-bottom: 60px;
+}
+
+.col {
+    display: inline-flex;
+}
+
+.bi {
+    height: 50px;
+    width: auto;
+    color: #4db7fe;
+    margin: 0 15px;
+}
+
+.content h3 {
+    color: #4db7fe;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.content p{
+    color: #878c9f;
+    font-size: 18px;
+    font-weight: 500;
+}

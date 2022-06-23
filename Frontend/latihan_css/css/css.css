@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    color: black;
+}
+
+body {
+    background: #fafafa;
+    font-size: 14px;
+}
+
+/* -------------------------------------------------------------------------------------------------------- */
+                                                    /* form */
+
+.wrapper .header {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    margin: 50px auto;
+}
+
+.wrapper .header .top,
+.wrapper .header .signup {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 1px;
+    padding: 40px 40px 20px;
+}
+
+.wrapper .header .logo img {
+    display: block;
+    margin: 0 auto 35px;
+}
+
+.wrapper .header .form .input_field {
+    margin-bottom: 7px;
+}
+
+.wrapper .header .form .input_field .input {
+    width: 100%;
+    padding: 10px;
+    background: #fafafa;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+.wrapper .header .form .input_field .input:focus {
+    border: 1px solid #b2b2b2;
+}
+
+.wrapper .header .form .input_field .button {
+    background: #0095f6;
+    display: block;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 7px;
+    text-align: center;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+.wrapper .header .or {
+    display: flex;
+    margin: 20px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper .header .or .line {
+    width: 105px;
+    height: 1px;
+    background: #dbdbdb;
+}
+
+.wrapper .header .or p {
+    color: #8e8e91;
+}
+
+.wrapper .header .diff .fb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0 20px;
+}
+
+.wrapper .header .diff .fb img {
+    width: 18px;
+    margin-right: 9px;
+}
+
+.wrapper .header .diff .fb p {
+    color: #375492;
+    font-weight: bold;
+}
+
+.wrapper .header .diff .forgot {
+    text-align: center;
+    font-size: 12px;
+    margin: 0 0 5px;
+}
+
+.wrapper .header .diff .forgot a {
+    color: #315a8a;
+    font-weight: bold;
+}
+
+.wrapper .header .signup {
+    text-align: center;
+    padding: 25px;
+    margin-top: 10px;
+}
+
+.wrapper .header .signup a {
+    color: #0095f6;
+    font-weight: bold;
+}
+
+.wrapper .header .apps {
+    text-align: center;
+    margin: 20px;
+}
+
+.wrapper .header .apps img {
+    width: 140px;
+    margin: 20px 3px;
+}
+
+/* -------------------------------------------------------------------------------------------------------- */
+                                                    /* footer */
+.wrapper .footer {
+    max-width: 935px;
+    width: 100%;
+    margin: 0 auto 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper .footer .links ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.wrapper .footer .links ul li a {
+    font-size: 12px;
+}
+
+.wrapper .footer .copyright p{
+    color: #999;
+}

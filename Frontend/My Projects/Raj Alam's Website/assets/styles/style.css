@@ -6,6 +6,8 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style-type: none;
+
+    /* add smooth scroll */
     scroll-behavior: smooth;
 }
 
@@ -124,6 +126,7 @@ header nav .nav-links ul li{
 }
 
 header nav ul li a {
+    cursor: pointer;
     color: var(--heading-color);
     font-weight: 500;
     position: relative;
@@ -413,7 +416,7 @@ footer {
     align-items: center;
     padding: 30px 120px;
     font-size: .8em;
-    box-shadow: 0 0 5px 1px var(--border-nav);
+    box-shadow: 0 0 3px 1px var(--border-nav);
 }
 
 footer .github a span {
@@ -429,6 +432,43 @@ footer .github:hover a span{
 
 footer .github a i {
     color: var(--heading-color);
+}
+
+/* ------------------------------- jump to top button ------------------------------------------ */
+.jump {
+    cursor: pointer;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    opacity: 0;
+    transition: .2s linear;
+    color: var(--heading-color);
+    opacity: 0;
+}
+
+.jump.reveal:hover {
+    opacity: .5;
+}
+
+.jump.reveal {
+    opacity: 1;
+    animation: shake .3s infinite;
+}
+
+/* --------------------------------------- animation ------------------------------------------ */
+@keyframes shake {
+    25%{
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    75% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(-5deg);
+    }
 }
 
 /* ---------------------------------- responsive ----------------------------------------------- */

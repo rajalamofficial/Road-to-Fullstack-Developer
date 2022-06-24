@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    font-family:sans-serif;
+}
+
+.hero {
+    background-color: rgb(51, 173, 255);
+    height: 300px;
+    color: white;
+}
+
+.title {
+    padding-top: 80px;
+    padding-left: 50px;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.subtitle {
+    padding-top: 5px;
+    padding-left: 50px;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.done {
+    text-decoration: line-through;
+}

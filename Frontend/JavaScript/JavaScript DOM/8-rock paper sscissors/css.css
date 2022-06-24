@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+
+:root {
+    --font: 'Patua One', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* header */
+
+header {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    color: #333;
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+/* info */
+
+.info {
+    display: flex;
+    width: 240px;
+    height: 80px;
+    border: 3px solid white;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+.info span {
+    color: white;
+    font-size: 32px;
+    margin: auto;
+}
+
+/* main */
+body {
+    font-family: var(--font);
+    background-color: #292c34;
+}
+
+ul {
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+}
+
+ul li {
+    display: block;
+    margin: 50px 20px;
+}
+
+ul li img {
+    width: 160px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+ul li img:active {
+    border: 5px solid rgba(221, 221, 221, 0.5);
+    border-radius: 50%;
+}

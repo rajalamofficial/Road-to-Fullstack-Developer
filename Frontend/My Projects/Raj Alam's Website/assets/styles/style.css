@@ -53,6 +53,7 @@ body::-webkit-scrollbar-thumb {
     border: 1px solid var(--heading-color);  
 }
 
+
 /* reveal element animation (dark mode)*/
 .section {
     opacity: .2;
@@ -141,7 +142,7 @@ header nav ul li .links::after {
     height: 3px;
     border-radius: 30px;
     background-color: var(--heading-color);
-    transition: .3s ease;
+    transition: .1s linear;
 }
 
 header nav ul li .links.active::after {
@@ -160,6 +161,7 @@ header nav .nav-links ul li .theme {
     width: 28px;
     position: absolute;
     cursor: pointer;
+    z-index: 9999;
 }
 
 /* --------------------------------- navbar mobile (header) --------------------------------------- */
@@ -179,7 +181,7 @@ header nav .menu span {
     height: 3px;
     background-color: var(--heading-color);
     border-radius: 20px;
-    transition: .3s;
+    transition: .2s;
 }
 
 header nav .menu span:nth-child(1){
@@ -219,7 +221,7 @@ header nav .sidebar {
     display: flex;
     justify-content: center;
     width: 0;
-    height: 800px;
+    height: 100vh;
     background-color: var(--sidebar);
     text-align: center;
     transition: .3s;
@@ -303,7 +305,6 @@ main .call-to-action .links a:hover {
 /* ------------------------------------------- aside / about me (main) --------------------------------------------- */
 main aside {
     display: flex;
-    flex-direction: row;
 }
 
 main h2 {
@@ -325,6 +326,16 @@ main aside article {
     display: flex;
     flex-direction: column;
 }
+
+main aside article img {
+    margin: 4em 40px;
+}
+
+main aside article section h3 {
+    color: var(--heading-color);
+    font-size: 1.2em;
+}
+
 main aside article:nth-child(1) {
     min-width: 35%;
     max-width: 100%;
@@ -336,17 +347,13 @@ main aside article:nth-child(2) {
     max-width: 100%;
 }
 
-main aside article img {
-    margin: 4em 40px;
-}
-
-main aside article section h3 {
-    color: var(--heading-color);
-    font-size: 1.2em;
+main aside article section:nth-child(1),
+main aside article section:nth-child(2){
+    padding-bottom: 1em;
 }
 
 main aside article section p {
-    margin: 1em 0 1em 0;
+    margin-top: 1em;
 }
 
 main aside article section ul li {
@@ -438,38 +445,86 @@ footer .github a i {
 .jump {
     cursor: pointer;
     position: fixed;
-    right: 50px;
-    bottom: 50px;
+    right: 30px;
+    bottom: 30px;
     opacity: 0;
-    transition: .2s linear;
+    transition: .1s linear;
     color: var(--heading-color);
     opacity: 0;
-}
-
-.jump.reveal:hover {
-    opacity: .5;
+    cursor: pointer;
+    font-size: 40px;
 }
 
 .jump.reveal {
     opacity: 1;
-    animation: shake .3s infinite;
+    animation: shake 2.5s ease-in-out infinite;
+    transform-origin: 50% 4px;
+}
+
+/* ------------------------------- info pop up ------------------------------------------ */
+.alert {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: -200px;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background-color: var(--heading-color);
+    color: var(--border-nav);
+    padding: 20px;
+    font-size: 1.1em;
+    transition: .6s;
+    opacity: 0;
+    color: var(--background);
+}
+
+.alert.reveal {
+    top: 0;
+    opacity: 1;
+}
+
+.alert span {
+    font-weight: bold;
+}
+
+.alert .close-btn {
+    color: var(--white);
+    font-weight: 600;
+    font-size: .8em;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: .2s;
+    background-color: var(--light-blue);
+}
+
+.alert .close-btn:hover {
+    transform: translateY(-5px);
+    opacity: .8;
 }
 
 /* --------------------------------------- animation ------------------------------------------ */
 @keyframes shake {
-    25%{
-        transform: rotate(5deg);
-    }
-    50% {
-        transform: rotate(-5deg);
-    }
-    75% {
-        transform: rotate(5deg);
-    }
-    100% {
-        transform: rotate(-5deg);
-    }
-}
+        0% {-webkit-transform: rotateZ(30deg);}
+        5% {-webkit-transform: rotateZ(-28deg);}
+        10% {-webkit-transform: rotateZ(34deg);}
+        15% {-webkit-transform: rotateZ(-32deg);}
+        20% {-webkit-transform: rotateZ(30deg);}
+        25% {-webkit-transform: rotateZ(-28deg);}
+        30% {-webkit-transform: rotateZ(26deg);}
+        35% {-webkit-transform: rotateZ(-24deg);}
+        40% {-webkit-transform: rotateZ(22deg);}
+        45% {-webkit-transform: rotateZ(-20deg);}
+        50% {-webkit-transform: rotateZ(18deg);}
+        55% {-webkit-transform: rotateZ(-16deg);}
+        60% {-webkit-transform: rotateZ(14deg);}
+      
+        65% { -webkit-transform: rotateZ(0); }
+        100% { -webkit-transform: rotateZ(0); }
+  }
 
 /* ---------------------------------- responsive ----------------------------------------------- */
 @media screen and (max-width: 1100px){
@@ -546,12 +601,17 @@ footer .github a i {
         margin: 75px 20px 0 20px;
     }
 
+    /* jumbotron */
+    main .jumbotron {
+        padding: 60px 0 120px 0
+    }
+
     main .jumbotron .jumbotron-header .say-hello{
         font-size: 20px;
     }
 
     main .jumbotron .jumbotron-header h1 {
-        font-size: 28px;
+        font-size: 30px;
         line-height: 42px;
     }
 
@@ -569,7 +629,7 @@ footer .github a i {
     /* main */
     main .jumbotron {
         text-align: center;
-        padding: 20px 0 40px 0;
+        padding: 60px 0 40px 0;
         max-width: 900px;
         margin: auto;
     }
@@ -598,8 +658,19 @@ footer .github a i {
 
 }
 
-@media screen and (max-width: 390px){
-    main .jumbotron .jumbotron-header .say-hello{
-        font-size: 20px;
+@media screen and (max-width: 410px){
+    main .jumbotron .jumbotron-header .subtitle {
+        display: none;
+    }   
+
+    main .call-to-action {
+        padding-top: 20px;
+    }
+
+    /* alert */
+    .alert {
+        justify-content: center;
+        text-align: center;
+        gap: 15px;
     }
 }

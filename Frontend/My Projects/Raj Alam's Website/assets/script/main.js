@@ -6,7 +6,38 @@ const navLinks = document.querySelectorAll('header nav ul li a');
 const section = document.querySelectorAll('.section');
 const jumpToTop = document.querySelector('.jump-to-top');
 const jump = document.querySelector('.jump');
-const scrollIntoView = document.querySelectorAll('[data-link]');
+const alert = document.querySelector('.alert');
+const closeBtn = document.querySelector('.close-btn');
+const understand = document.getElementById('understand');
+const myAge = document.getElementById('my-age');
+
+// my age
+const today = new Date().getFullYear();
+const myBirthday = new Date(2004, 07, 24).getFullYear();
+const yearsOld = today - myBirthday;
+myAge.innerHTML = yearsOld;
+
+// if the website currently under Development!
+setTimeout(() => {
+    alert.classList.add('reveal');
+    closeBtn.addEventListener('click', () => {
+        alert.classList.remove('reveal');
+    });
+
+    // if user didnt click the understand button
+    let counter = 5;
+    let understandTimer = setInterval(() => {
+        counter--;
+        understand.innerHTML = counter;
+
+        if(counter === 0){
+            clearInterval(understandTimer);
+            setTimeout(() => {
+                alert.classList.remove('reveal');
+            }, 1000);
+        }
+    }, 1000);
+}, 1000);
 
 // active class on Nav Links when scrolled
 window.onscroll = () => {
@@ -16,6 +47,7 @@ window.onscroll = () => {
         let height = sec.offsetHeight;
         let idSection = sec.getAttribute('id');
 
+        // add class reveal on Jump Button when window.scrollY equal or higher than 500
         if(top >= 500){
             jump.classList.add('reveal');
         } else {
@@ -51,41 +83,46 @@ body.addEventListener('click', (e) => {
     // theme
     } else if(target.classList.contains('theme') || target.classList.contains('theme-mobile')) {
 
-        // if light key on localstorage is not equal on
-        if(setLightMode !== 'on'){
-            lightMode();
-            setLightMode = localStorage.setItem('light', 'on');
-            themeBtn.src = 'assets/img/icons-sun.png';
-            themeMobileBtn.src = 'assets/img/icons-sun.png';
-        } 
-        
-        // else... set the light key on localstorage to off
-        else {
-            lightMode();
-            setLightMode = localStorage.setItem('light', 'off');
-            themeBtn.src = 'assets/img/icons-moon.png';
-            themeMobileBtn.src = 'assets/img/icons-moon.png';
+        // change the src & set the theme
+        if(target.getAttribute('src') == 'assets/img/icons-moon.png'){
+            enableLightMode();
+        } else {
+            disableLightMode();
         }
 
+        // save to local storage
+        if(lightMode !== 'enabled'){
+            lightMode = localStorage.setItem('LIGHT', 'enabled');
+        } else {
+            lightMode = localStorage.setItem('LIGHT', null);
+        }
+
+    //  scroll to top when Jump button is clicked  
     } else if(target.classList.contains('jump')) {
         window.scrollTo({ top: 0, behavior: 'smooth' });
 
-    } else if(target.innerHTML.includes('Home')){
-        window.scrollTo({ top: 0, behavior: 'smooth'});
+    // scroll to top when Home Link is clicked
+    } else if(target.getAttribute('data-link') == 'home'){
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 });
 
-// function Light Mode
-function lightMode(){
-    body.classList.toggle('light');
-}
+// function Light Mode and Dark Mode
+let lightMode = localStorage.getItem('LIGHT');
 
-// get the light key from localstorage
-let setLightMode = localStorage.getItem('light');
-
-// if light key is on, run lightmode function
-if(setLightMode === 'on'){
-    lightMode();
+function enableLightMode() {
+    document.body.classList.add('light');
     themeBtn.src = 'assets/img/icons-sun.png';
     themeMobileBtn.src = 'assets/img/icons-sun.png';
+};
+
+function disableLightMode() {
+    document.body.classList.remove('light');
+    themeBtn.src = 'assets/img/icons-moon.png';
+    themeMobileBtn.src = 'assets/img/icons-moon.png';
 }
+
+if(lightMode === 'enabled'){
+    enableLightMode();
+}
+

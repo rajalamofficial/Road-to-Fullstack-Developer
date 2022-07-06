@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    color: white;
+    background-color: #101820;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    letter-spacing: 1.5px;
+    word-spacing: 1,5px;
+}
+
+.m-bg-dark {
+    background-color: #101820;
+}
+
+.text-purple {
+    color: #6f00ff;
+}
+
+/* -------------------------------------------------------------------------------------------------------- */
+                                                    /* navbar */
+
+.container-sm {
+    margin: 0;
+}
+                                                    
+.navbar {
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand {
+    font-weight: 600;
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+    margin-left: -50px;
+}
+
+.navbar-brand-text{
+    margin-left: -68px;
+    margin-right: 50px;
+    font-size: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.navbar-brand-text:hover{
+    color: #6f00ff;
+}
+
+.nav-item {
+    margin-right: 15px;
+}
+
+.m-nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #9ea2a5;
+    text-decoration: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+.m-nav-link:hover {
+   color: #6f00ff;
+}
+
+.m-active {
+    color: white;
+    border-bottom: 3px solid #6f00ff;
+}
+
+.m-nav-btn {
+    margin-right: -150px;
+}
+
+/* -------------------------------------------------------------------------------------------------------- */
+                                                    /* Body */
+
+.title {
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 50px;
+    margin-bottom: 10px;
+}
+                
+.title span {
+    background-color: white;
+    color: #101820;
+    letter-spacing: 0px;
+}
+
+.subtitle {
+    color: #e2e2e2;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.btn-login {
+    background-color: transparent;
+    color: #ffffff;   
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600; 
+    transition:  border-color 0.1s, background-color 0.2s, ease-out 0.2s;
+    border: 1px solid white;
+    margin-right: 10px;
+}
+
+.btn-login:hover {
+    background-color: #6f00ff;
+    color: #ffffff;   
+    border-color: #6f00ff;
+}
+
+.btn-signup {
+    background-color: #6f00ff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: ease-in 0.2s;
+}
+
+.btn-signup:hover {
+    background-color: #ffffff;
+    color: #680ae4;
+}
+                                                    
+.animation img{
+    width: 570px;
+    height: auto;
+}                                                    
+
+/* -------------------------------------------------------------------------------------------------------- */
+                                                /* Section */
+.title-section {
+    font-weight: bold;
+    font-size: 18px;
+}                  
+
+.line {
+    background-color: #6f00ff;
+    height: 4px;
+    width: 105px;
+    border: none;
+    border-radius: 30px;
+}
+
+.why-jaicomp ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.why-jaicomp li {
+    margin-top: 25px;
+}
+
+.why-jaicomp li h6 {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.why-jaicomp p {
+    margin-top: -3px;
+    color: #e2e2e2;
+}
+/* -------------------------------------------------------------------------------------------------------- */
+
+                                                /* Footer */
+.footer {
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3);
+}
+                                                
+.footer-copyright {
+    padding: 10px;
+}                                                
+/* -------------------------------------------------------------------------------------------------------- */
+                                            /* Responsive Mobile*/   
+
+@media only screen and (max-width: 700px) {
+    /* Navbar Brand */
+  .navbar-brand-text {
+      margin-left: -230px;
+  }
+  
+  .animation img {
+      display: none;
+  }
+
+  header {
+      text-align: center;
+  }
+
+  .why-jaicomp p {
+      margin-right: 60px;
+  }
+}      
+
+@media only screen and (max-width: 440px) {
+    /* Navbar Brand */
+  .navbar-brand-text {
+      margin-left: -180px;
+  }
+  
+  .animation img {
+      display: none;
+  }
+
+  header {
+      text-align: center;
+  }
+
+  .why-jaicomp p {
+      margin-right: 60px;
+  }
+}  
+
+@media only screen and (max-width: 430px) {
+    /* Navbar Brand */
+  .navbar-brand-text {
+      margin-left: -165px;
+  }
+  
+  .animation img {
+      display: none;
+  }
+
+  header {
+      text-align: center;
+  }
+
+  .why-jaicomp p {
+      margin-right: 60px;
+  }
+}  
+
+@media only screen and (max-width: 420px) {
+    /* Navbar Brand */
+  .navbar-brand-text {
+      margin-left: -160px;
+  }
+  
+  .animation img {
+      display: none;
+  }
+
+  header {
+      text-align: center;
+  }
+
+  .why-jaicomp p {
+      margin-right: 60px;
+  }
+}  
+
+@media only screen and (max-width: 410px) {
+    /* Navbar Brand */
+  .navbar-brand-text {
+      margin-left: -145px;
+  }
+  
+  .animation img {
+      display: none;
+  }
+
+  header {
+      text-align: center;
+  }
+
+  .why-jaicomp p {
+      margin-right: 60px;
+  }
+}  
+
+@media only screen and (max-width: 400px) {
+    /* Navbar Brand */
+  .navbar-brand-text {
+      margin-left: -140px;
+  }
+  
+  .animation img {
+      display: none;
+  }
+
+  header {
+      text-align: center;
+  }
+
+  .why-jaicomp p {
+      margin-right: 60px;
+  }
+}  
+
+@media only screen and (max-width: 380px) {
+    /* Navbar Brand */
+  .navbar-brand-text {
+      margin-left: -130px;
+  }
+  
+  .animation img {
+      display: none;
+  }
+
+  header {
+      text-align: center;
+  }
+
+  .why-jaicomp p {
+      margin-right: 60px;
+  }
+}  
+
+
+@media only screen and (max-width: 375px) {
+    /* Navbar Brand */
+  .navbar-brand-text {
+      margin-left: -120px;
+  }
+
+   .animation img {
+      display: none;
+  }
+
+  header {
+      text-align: center;
+  }
+
+  .why-jaicomp p {
+      margin-right: 60px;
+  }
+}    
+       
+@media only screen and (max-width: 360px) {
+    /* Navbar Brand */
+  .navbar-brand-text {
+      margin-left: -110px;
+  }
+
+   .animation img {
+      display: none;
+  }
+
+  header {
+      text-align: center;
+  }
+
+  .why-jaicomp p {
+      margin-right: 60px;
+  }
+}    
+
+@media only screen and (max-width: 350px) {
+    /* Navbar Brand */
+  .navbar-brand-text {
+      margin-left: -90px;
+  }
+
+   .animation img {
+      display: none;
+  }
+
+  header {
+      text-align: center;
+  }
+
+  .why-jaicomp p {
+      margin-right: 60px;
+  }
+}
+
+
+    
+
+                                     

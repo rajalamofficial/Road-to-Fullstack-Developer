@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    color: white;
+    background-color: #101820;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+body {
+    letter-spacing: 1.5px;
+    word-spacing: 1,5px;
+}
+
+.m-bg-dark {
+    background-color: #101820;
+}
+
+.text-purple {
+    color: #6f00ff;
+}
+
+/* -------------------------------------------------------------------------------------------------------- */
+                                                    /* navbar */
+
+.container-sm {
+    margin: 0;
+}
+                                                    
+.navbar {
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand {
+    font-weight: 600;
+    width: 180px;
+    height: auto;
+    cursor: pointer;
+    margin-left: -45px;
+    margin-top: -1px;
+}
+
+.navbar-brand-text{
+    margin-left: -62px;
+    margin-right: 50px;
+    font-size: 22px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.navbar-brand-text:hover{
+    color: #6f00ff;
+}
+
+.nav-item {
+    margin-right: 16px;
+    font-size: 12px;
+    margin-left: -5px;
+}
+
+.m-nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #9ea2a5;
+    text-decoration: none;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+.m-nav-link:hover {
+   color: #6f00ff;
+}
+
+.m-active {
+    color: white;
+    border-bottom: 2px solid #6f00ff;
+}
+
+.m-nav-btn {
+    margin-right: -185px;
+}
+
+.btn-login {
+    background-color: transparent;
+    color: #ffffff;   
+    padding: 9.5px 18px;
+    font-size: 12.5px;
+    font-weight: 600; 
+    transition:  border-color 0.1s, background-color 0.2s, ease-out 0.2s;
+    border: 1px solid white;
+    margin-right: 10px;
+}
+
+.btn-login:hover {
+    background-color: #6f00ff;
+    color: #ffffff;   
+    border-color: #6f00ff;
+}
+
+.btn-signup {
+    background-color: #6f00ff;
+    color: white;
+    padding: 9.5px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: ease-in 0.2s;
+    font-size: 12.5px;
+}
+
+.btn-signup:hover {
+    background-color: #ffffff;
+    color: #680ae4;
+}
+
+
+/* -------------------------------------------------------------------------------------------------------- */
+                                                /* Shop */
+.btn-shop {
+    background-color: #6f00ff;
+    color: white;
+    letter-spacing: 0.5px;
+}
+
+.btn-shop:hover {
+    background-color: transparent;
+    color: #6f00ff;
+    border: 1px solid #6f00ff;
+}
+
+.line {
+    border-bottom: 2px solid #6f00ff;
+}
+/* -------------------------------------------------------------------------------------------------------- */
+                                               /* Footer */
+.footer {
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3);
+}
+                                                
+.footer-copyright {
+    padding: 10px;
+}              
+
+
+/* -------------------------------------------------------------------------------------------------------- */
+                                            /* Responsive Mobile*/
+@media only screen and (max-width: 700px) {
+    /* Navbar Brand */
+  .navbar-brand-text {
+      margin-left: -220px;
+  }
+  
+  .animation img {
+      display: none;
+  }
+
+  header {
+      text-align: center;
+  }
+
+  .container-lg {
+    margin-left: 20px;
+    margin-top: 5rem;
+  }
+
+  .why-jaicomp p {
+      margin-right: 60px;
+  }
+}    
+
+@media only screen and (max-width: 410px) {
+    /* Navbar Brand */
+  .navbar-brand-text {
+      margin-left: -180px;
+  }
+  
+  .animation img {
+      display: none;
+  }
+
+  header {
+      text-align: center;
+  }
+
+  .container-lg {
+    margin-left: 20px;
+    margin-top: 5rem;
+  }
+
+  .why-jaicomp p {
+      margin-right: 60px;
+  }
+}         
+
+@media only screen and (max-width: 400px) {
+    /* Navbar Brand */
+  .navbar-brand-text {
+      margin-left: -175px;
+  }
+  
+  .animation img {
+      display: none;
+  }
+
+  header {
+      text-align: center;
+  }
+
+  .container-lg {
+    margin-left: 20px;
+    margin-top: 5rem;
+  }
+
+  .why-jaicomp p {
+      margin-right: 60px;
+  }
+}         
+
+@media only screen and (max-width: 375px) {
+    /* Navbar Brand */
+  .navbar-brand-text {
+      margin-left: -145px;
+  }
+  
+  .animation img {
+      display: none;
+  }
+
+  header {
+      text-align: center;
+  }
+
+  .container-lg {
+    margin-left: 20px;
+    margin-top: 5rem;
+  }
+
+  .why-jaicomp p {
+      margin-right: 60px;
+  }
+}         
+
+@media only screen and (max-width: 360px) {
+    /* Navbar Brand */
+  .navbar-brand-text {
+      margin-left: -135px;
+  }
+  
+  .animation img {
+      display: none;
+  }
+
+  header {
+      text-align: center;
+  }
+
+  .container-lg {
+    margin-left: 20px;
+    margin-top: 5rem;
+  }
+
+  .why-jaicomp p {
+      margin-right: 60px;
+  }
+}         
+
+
+@media only screen and (max-width: 350px) {
+    /* Navbar Brand */
+  .navbar-brand-text {
+      margin-left: -115px;
+  }
+  
+  .animation img {
+      display: none;
+  }
+
+  header {
+      text-align: center;
+  }
+
+  .container-lg {
+    margin-left: 20px;
+    margin-top: 5rem;
+  }
+
+  .why-jaicomp p {
+      margin-right: 60px;
+  }
+}         
+
+

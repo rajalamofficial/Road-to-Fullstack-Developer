@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: rgb(45, 64, 94);
+}
+
+.container {
+    margin: 85px;
+    text-align: center;
+}
+
+.navbar {
+    color: #ffffff;
+    text-decoration: none;
+    transition: ease-out 0.3s;
+
+}
+
+.line {
+    width: 50px;
+    border: 1px solid lawngreen;
+    border-radius: 30px;
+}
+
+.box {
+    position: absolute;
+    width: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #141718;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.box h1 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+}
+
+.box p {
+    color: rgb(158, 158, 158);
+    text-align: center;
+    font-size: 15px;
+}
+
+.box input[type="email"], .box input[type="password"] {
+    display: block;
+    width: 180px;
+    margin: 20px auto;
+    background: none;
+    border: none;
+    outline: none;
+    text-align: center;
+    color: white;
+    border: 2px solid #0984e3;
+    padding: 15px 20px;
+    border-radius: 30px;
+    transition: width 0.5s, color 0.5s;
+}
+
+.box input[type="email"]:focus, .box input[type="password"]:focus {
+    width: 230px;
+    border: 2px solid #27ae60;
+}
+
+.box p {
+    display: block;
+    margin: 20px auto;
+    color: rgb(158, 158, 158);
+    text-align: center;
+}
+
+.masuk {
+    color: whitesmoke;
+    text-decoration: none;
+    border-bottom: 1px solid whitesmoke;
+    transition: 0.3s;
+}
+
+.masuk:hover {
+    color: #27ae60;
+    text-decoration: none;
+    border-bottom: 1px solid #27ae60;
+}
+
+.box input[type="submit"] {
+    display: block;
+    border: none;
+    background: none;
+    color: white;
+    margin: 20px auto;
+    border: 2px solid #27ae60;
+    padding: 15px 40px;
+    border-radius: 30px;
+    transition: background 0.5s, padding 0.5s;
+}
+
+.box input[type="submit"]:hover {
+    background: #27ae60;
+    padding: 15px 60px;
+}
+
+@media only screen and (max-width: 700px) {
+    /* Navbar Brand */
+    .container {
+        margin: 55px;
+    }
+}                       
